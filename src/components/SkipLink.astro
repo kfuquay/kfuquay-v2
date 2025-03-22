@@ -1,0 +1,22 @@
+<a href="#main" id="skip-link">
+  SKIP TO CONTENT
+</a>
+
+<style>
+  #skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    opacity: 0;
+    border: 2px solid var(--primary-color);
+    padding: 1em;
+    border-radius: 0.5em;
+    transition: opacity 0.5s ease-in-out;
+  }
+  #skip-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+</style>
