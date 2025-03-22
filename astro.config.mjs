@@ -7,20 +7,23 @@ import rehypeExternalLinks from 'rehype-external-links'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-blog-template.netlify.app',
+  site: "https://astro-blog-template.netlify.app",
   integrations: [mdx(), svelte()],
+  prefetch: {
+    prefetchAll: true,
+  },
   markdown: {
     shikiConfig: {
-      theme: 'nord',
+      theme: "nord",
     },
     remarkPlugins: [remarkGfm, remarkSmartypants],
     rehypePlugins: [
       [
         rehypeExternalLinks,
         {
-          target: '_blank',
+          target: "_blank",
         },
       ],
     ],
   },
-})
+});
